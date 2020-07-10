@@ -11,7 +11,7 @@ app.use(cors());
 const repositories = [];
 
 app.get("/repositories", (request, response) => {
-  // TODO
+  return response.json(repositories)
 });
 
 app.post("/repositories", (request, response) => {
@@ -29,7 +29,10 @@ app.post("/repositories", (request, response) => {
 });
 
 app.put("/repositories/:id", (request, response) => {
-  // TODO
+  const { id } = request.params;
+  const { title, url, techs } = request.body;
+  
+//   repositories.findIndex(
 });
 
 app.delete("/repositories/:id", (request, response) => {
